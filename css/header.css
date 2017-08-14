@@ -1,0 +1,51 @@
+/****************************************************************/
+/*							HEADER                              */
+/****************************************************************/
+* {box-sizing: border-box; font-family: 'Gotham', sans-serif;}
+header {width: 100%; height: 90px; background: #fff; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; left: 0; z-index: 9998;}
+.logo {height: 65px;}
+.logo a {height: 100%; display: block;}
+.logo img {height: 100%;}
+.menu-header {width: 55%; display: flex; justify-content: space-between;}
+.menu-header a {font-family: 'Gotham Book', sans-serif; font-size: 18px; color: #817642; transition: .3s;}
+.menu-header a:hover {color: #192930}
+.open-menu {font-size: 35px; color: #817642; display: none;}
+
+.menu-mobile {width: 70%; height: 100vh; background: rgba(0,0,0,0.85); z-index: 9999; position: fixed; top: 0; right: 0; padding: 20px; display: none;}
+.menu-mobile nav {width: 100%; margin-top: 15px;}
+.menu-mobile nav a {text-align: right; font-size: 22px; color: #fff; text-transform: uppercase; margin-bottom: 25px;}
+.close-menu {font-size: 35px; color: #fff; position: absolute; left: 20px; top: 25px;}
+.overlay-menu {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; z-index: 9998; background: rgba(0,0,0,0.5); display: none;}
+.open-menu-circle {width: 50px; height: 50px; border-radius: 50px; background: #817642; font-size: 25px; color: #fff; text-align: center; line-height: 50px; position: fixed; bottom: 3%; right: 5%; z-index: 9999; display: none;}
+
+/****************************************************************/
+/*						   BANNER HOME                          */
+/****************************************************************/
+#banner-home {width: 100%; height: 100vh; overflow: hidden;}
+#banner-home video {width: 100%; z-index: 0;}
+#banner-home .overlay {width: 100%; height: 100vh; background: rgba(0,0,0,0.7); z-index: 1; position: absolute; top: 0; left: 0;}
+#banner-home .content {width: 100%; height: 100vh; padding: 0 10%; z-index: 2; position: absolute; top: 0; left: 0; background: url(../img/texture-point.png); display: flex; flex-flow: column; justify-content: center; align-items: center;osition: absolute; top: 0; left: 0;}
+#banner-home h1 {font-size: 45px; color: #fff; text-align: center; padding: 0 20px 30px 20px; position: relative; margin-bottom: 30px; font-weight: bold;}
+#banner-home h1:after {content: ''; width: 100%; height: 1px; position: absolute; bottom: 0; left: 0; background: rgba(255,255,255,0.25);}
+#banner-home p {font-size: 22px; color: #fff; text-align: center; font-weight: 300; line-height: 35px;}
+
+@media (min-width: 1440px){
+	header {padding: 0 10%;}
+	.logo {height: 79px;}
+	.menu-header a {font-size: 20px}
+	#banner-home h1 {font-size: 60px;}
+	#banner-home p {font-size: 25px;}
+}
+
+@media (max-width: 992px){
+	.menu-header {display: none;}
+	.open-menu {display: block;}
+}
+
+@media (max-width: 768px){
+	header {padding: 0 2.5%;}
+	.logo {height: 65px;}
+	#banner-home video {width: auto; height: 100%; margin: 0 auto;}
+	#banner-home h1 {font-size: 40px; line-height: 60px;}
+	#banner-home p {font-size: 20px;}
+}
